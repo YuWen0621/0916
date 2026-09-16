@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YuWen · Personal Page</title>
+  <meta name="description" content="YuWen's personal space with real-time current local time, date, and location in Taiwan.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient background glow elements -->
+  <div class="glow-orb orb-1" aria-hidden="true"></div>
+  <div class="glow-orb orb-2" aria-hidden="true"></div>
+  <div class="glow-orb orb-3" aria-hidden="true"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-brand" id="nav-brand">
+        <span class="brand-avatar" id="brand-avatar">YW</span>
+        <span class="brand-name" id="nav-display-name">YuWen</span>
+      </div>
+
+      <div class="nav-meta">
+        <div class="location-pill" id="nav-location-pill" title="Current Location">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span class="pill-text" id="nav-location-text">Taiwan</span>
+        </div>
+
+        <div class="nav-actions">
+          <button class="icon-btn" id="theme-toggle-btn" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
+            <svg class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-content" id="main-content">
+    <!-- Hero Profile Section -->
+    <section class="hero-section" id="hero-section">
+      <div class="hero-container">
+        <div class="hero-badge" id="hero-greeting-badge">
+          <span class="badge-sparkle">✨</span>
+          <span id="hero-greeting-text">Welcome to my page</span>
+        </div>
+
+        <div class="profile-header">
+          <div class="profile-avatar-wrapper">
+            <div class="profile-avatar" id="main-avatar">
+              <span class="avatar-initials" id="avatar-initials">YW</span>
+            </div>
+            <div class="avatar-status-badge" title="Live status active">
+              <span class="mini-pulse"></span>
+            </div>
+          </div>
+
+          <div class="profile-headings">
+            <div class="title-row">
+              <h1 class="profile-name" id="display-name">YuWen</h1>
+              <span class="verified-badge" title="Personal Page">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+              </span>
+            </div>
+            <div class="profile-meta-tags">
+              <span class="meta-tag location-tag" id="meta-location">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span id="display-location">Taiwan</span>
+              </span>
+              <span class="meta-tag timezone-tag" id="meta-timezone">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span id="display-timezone">UTC+8</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Real-Time Clock & Current Hub Section -->
+    <section class="current-section" id="current-hub">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-sub">REAL-TIME SYNCHRONIZED</span>
+          <h2 class="section-title">Current Local Time</h2>
+        </div>
+        <div class="live-clock-badge" id="clock-badge">
+          <span class="live-indicator">LIVE</span>
+          <span class="clock-display" id="live-clock">--:--:--</span>
+        </div>
+      </div>
+
+      <!-- Live Clock Feature Showcase -->
+      <div class="clock-showcase-grid">
+        
+        <!-- Main Large Clock Card -->
+        <div class="bento-card bento-hero card-clock" id="card-clock">
+          <div class="card-glow-bg"></div>
+          <div class="card-top">
+            <span class="card-tag">TAIWAN STANDARD TIME</span>
+            <div class="live-pulse-wrapper">
+              <span class="pulse-dot"></span>
+              <span class="live-label">ACTIVE</span>
+            </div>
+          </div>
+          
+          <div class="card-main clock-center">
+            <div class="big-digital-clock" id="big-digital-clock">
+              <span id="clock-time">--:--:--</span>
+              <span class="clock-ampm" id="clock-ampm">--</span>
+            </div>
+            
+            <div class="date-details">
+              <span class="date-day" id="date-day">Loading...</span>
+              <span class="date-divider">·</span>
+              <span class="date-full" id="date-full">Loading date...</span>
+            </div>
+
+            <div class="clock-metrics-row">
+              <div class="metric-item">
+                <span class="metric-label">Location</span>
+                <span class="metric-value" id="metric-location">Taiwan</span>
+              </div>
+              <div class="metric-divider"></div>
+              <div class="metric-item">
+                <span class="metric-label">Timezone</span>
+                <span class="metric-value" id="metric-timezone">Asia/Taipei (UTC+8)</span>
+              </div>
+              <div class="metric-divider"></div>
+              <div class="metric-item">
+                <span class="metric-label">Precision</span>
+                <span class="metric-value">Real-time / 1s</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toast-container" aria-live="polite"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="page-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <span class="footer-dot"></span>
+        <span>YuWen · Personal Page · Taiwan</span>
+      </div>
+      <div class="footer-right">
+        <span id="footer-year">2026</span> &copy; <span id="footer-name">YuWen</span>.
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
